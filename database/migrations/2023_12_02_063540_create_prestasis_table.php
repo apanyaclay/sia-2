@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('prestasis', function (Blueprint $table) {
             $table->id();
-            $table->integer('Siswa_ID')->length(10);
-            $table->enum('Jenis_Prestasi',['Akademik','Non-Akademik']);
-            $table->string('Deskripsi')->length(150);
-            $table->date('Tanggal');
+            $table->integer('siswa_id')->length(10);
+            $table->enum('jenis_prestasi',['Akademik','Non-Akademik']);
+            $table->string('deskripsi')->length(150);
+            $table->date('tanggal');
             $table->timestamps();
-            $table->foreign('Siswa_ID')->references('NISN')->on('siswas')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('siswa_id')->references('nisn')->on('siswas')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 

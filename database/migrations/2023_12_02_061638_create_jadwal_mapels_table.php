@@ -13,16 +13,16 @@ return new class extends Migration
     {
         Schema::create('jadwal_mapels', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Kelas_ID')->length(10);
-            $table->unsignedBigInteger('Mapel_ID')->length(5);
-            $table->unsignedBigInteger('Thn_Ajaran_ID');
-            $table->time('Waktu_Mulai');
-            $table->time('Waktu_Selesai');
-            $table->enum('Hari',['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu']);
+            $table->unsignedBigInteger('kelas_id')->length(10);
+            $table->unsignedBigInteger('mapel_id')->length(5);
+            $table->unsignedBigInteger('tahun_ajaran_id');
+            $table->time('waktu_mulai');
+            $table->time('waktu_selesai');
+            $table->enum('hari',['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu']);
             $table->timestamps();
-            $table->foreign('Kelas_ID')->references('id')->on('kelas')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('Mapel_ID')->references('id')->on('mata_pelajarans')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('Thn_Ajaran_ID')->references('id')->on('tahun_ajarans')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('kelas_id')->references('id')->on('kelas')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('mapel_id')->references('id')->on('mata_pelajarans')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('tahun_ajaran_id')->references('id')->on('tahun_ajarans')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 

@@ -13,10 +13,10 @@ return new class extends Migration
     {
         Schema::create('tahun_ajarans', function (Blueprint $table) {
             $table->id();
-            $table->char('Thn_Ajaran')->length(9);
-            $table->enum('Semester',['Ganjil','Genap']);
-            $table->date('Tanggal_Mulai');
-            $table->date('Tanggal_Selesai');
+            $table->char('tahun_ajaran')->length(9);
+            $table->enum('semester',['Ganjil','Genap']);
+            $table->date('tanggal_mulai');
+            $table->date('tanggal_selesai');
             $table->timestamps();
         });
     }

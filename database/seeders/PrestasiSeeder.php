@@ -13,6 +13,11 @@ class PrestasiSeeder extends Seeder
      */
     public function run(): void
     {
-
+        Prestasi::create([
+            'siswa_id'          => '78791950',
+            'jenis_prestasi'    => 'Non-Akademik',
+            'deskripsi'         => 'Karate',
+            'tanggal'           => '2023-10-12',
+        ]);
     }
 }

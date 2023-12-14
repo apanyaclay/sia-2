@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('ekskul_siswas', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Ekskul_ID');
-            $table->integer('Siswa_ID');
-            $table->unsignedBigInteger('Thn_Ajaran_ID');
+            $table->unsignedBigInteger('ekskul_id');
+            $table->integer('siswa_id');
+            $table->unsignedBigInteger('tahun_ajaran_id');
             $table->timestamps();
-            $table->foreign('Ekskul_ID')->references('id')->on('ekstrakurikulers')->onDelete('cascade')->onUpdate('cascade');
-            $table->foreign('Siswa_ID')->references('NISN')->on('siswas')->onDelete('restrict')->onUpdate('cascade');
-            $table->foreign('Thn_Ajaran_ID')->references('id')->on('tahun_ajarans')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('ekskul_id')->references('id')->on('ekstrakurikulers')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('siswa_id')->references('nisn')->on('siswas')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('tahun_ajaran_id')->references('id')->on('tahun_ajarans')->onDelete('restrict')->onUpdate('cascade');
             
         });
     }

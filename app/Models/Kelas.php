@@ -9,20 +9,11 @@ class Kelas extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'kelas';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'guru_id',
+        'nama_kelas',
+        'tingkatan',
+        'kelompok_kelas',
     ];
 }

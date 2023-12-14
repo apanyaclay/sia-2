@@ -9,20 +9,16 @@ class TataUsaha extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'tata_usahas';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'id_pegawai',
+        'user_id',
+        'nama_pegawai',
+        'jenis_kelamin',
+        'tmt_kerja',
+        'tempat_lahir',
+        'tanggal_lahir',
+        'jenajng_pendidikan',
+        'status',
     ];
 }

@@ -12,17 +12,17 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kepala_sekolahs', function (Blueprint $table) {
-            $table->bigInteger('ID_Kepsek')->length(20)->primary();
-            $table->unsignedBigInteger('Users_ID');
-            $table->string('Nama_Kepsek')->length(150);
-            $table->string('Jenjang_Pendidikan')->length(100);
-            $table->enum('Jenis_Kelamin', ['L','P']);
-            $table->string('Tempat_Lahir')->length(100);
-            $table->date('Tanggal_Lahir');
-            $table->date('TMT_Kerja');
-            $table->enum('Status',['Aktif','Resign','Diberhentikan','Cuti']);
+            $table->bigInteger('id_kepsek')->length(20)->primary();
+            $table->unsignedBigInteger('user_id');
+            $table->string('nama_kepsek')->length(150);
+            $table->string('jenjang_pendidikan')->length(100);
+            $table->enum('jenis_kelamin', ['L','P']);
+            $table->string('tempat_lahir')->length(100);
+            $table->date('tanggal_lahir');
+            $table->date('tmt_kerja');
+            $table->enum('status',['Aktif','Resign','Diberhentikan','Cuti']);
             $table->timestamps();
-            $table->foreign('Users_ID')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
+            $table->foreign('user_id')->references('id')->on('users')->onDelete('cascade')->onUpdate('cascade');
         });
     }
 

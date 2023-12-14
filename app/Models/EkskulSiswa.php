@@ -9,20 +9,10 @@ class EkskulSiswa extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'ekskul_siswas';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'ekskul_id',
+        'siswa_id',
+        'tahun_ajaran_id',
     ];
 }

@@ -9,20 +9,25 @@ class Siswa extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'siswas';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'nisn',
+        'user_id',
+        'nama_siswa',
+        'jenis_kelamin',
+        'tempat_lahir',
+        'tanggal_lahir',
+        'kelas_id',
+        'agama',
+        'alamat',
+        'no_hp',
+        'status_dlm_klrg',
+        'nama_ayah',
+        'nama_ibu',
+        'pekerjaan_ayah',
+        'pekerjaan_ibu',
+        'sekolah_asal',
+        'status_siswa',
+        'anak_ke',
     ];
 }

@@ -9,20 +9,11 @@ class Prestasi extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'prestasis';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'siswa_id',
+        'jenis_prestasi',
+        'deskripsi',
+        'tanggal',
     ];
 }

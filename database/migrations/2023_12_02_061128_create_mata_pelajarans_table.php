@@ -13,11 +13,11 @@ return new class extends Migration
     {
         Schema::create('mata_pelajarans', function (Blueprint $table) {
             $table->id();
-            $table->string('Nama_Mapel')->length(50);
-            $table->integer('KKM')->length(2);
-            $table->bigInteger('Guru_ID');
+            $table->string('nama_mapel')->length(50);
+            $table->integer('kkm')->length(2);
+            $table->bigInteger('guru_id');
             $table->timestamps();
-            $table->foreign('Guru_ID')->references('NUPTK')->on('gurus')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('guru_id')->references('nuptk')->on('gurus')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 

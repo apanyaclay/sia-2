@@ -9,20 +9,13 @@ class JadwalMapel extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'jadwal_mapels';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'kelas_id',
+        'mapel_id',
+        'tahun_ajaran_id',
+        'waktu_mulai',
+        'waktu_selesai',
+        'hari',
     ];
 }

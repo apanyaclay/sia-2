@@ -9,20 +9,11 @@ class TahunAjaran extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'tahun_ajarans';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'tahun_ajaran',
+        'semester',
+        'tanggal_mulai',
+        'tanggal_selesai',
     ];
 }

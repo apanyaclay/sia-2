@@ -12,16 +12,16 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('kip_kps_pips', function (Blueprint $table) {
-            $table->integer('ID_Status')->primary();
-            $table->integer('ID_Siswa')->length(10);
-            $table->enum('Status_KIP',['ya','tidak']);
-            $table->string('No_KIP')->length(30);
-            $table->enum('Status_KPS', ['ya','tidak']);
-            $table->string('No_KPS')->length(30);
-            $table->enum('Status_Eligible_PIP',['ya','tidak']);
-            $table->string('Alasan_Eligible_PIP')->length(50);
+            $table->integer('id_status')->primary();
+            $table->integer('siswa_id')->length(10);
+            $table->enum('status_kip',['ya','tidak']);
+            $table->string('no_kip')->length(30);
+            $table->enum('status_kps', ['ya','tidak']);
+            $table->string('no_kps')->length(30);
+            $table->enum('status_eligible_pip',['ya','tidak']);
+            $table->string('alasan_eligible_pip')->length(50);
             $table->timestamps();
-            $table->foreign('ID_Siswa')->references('NISN')->on('siswas')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('siswa_id')->references('nisn')->on('siswas')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 

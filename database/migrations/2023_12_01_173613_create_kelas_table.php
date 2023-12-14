@@ -13,12 +13,12 @@ return new class extends Migration
     {
         Schema::create('kelas', function (Blueprint $table) {
             $table->id();
-            $table->bigInteger('Guru_ID');
-            $table->string('Nama_Kelas')->length(150);
-            $table->enum('Tingkatan',['7','8','9']);
-            $table->enum('Kelompok_Kelas',['A','B','C','D','E']);
+            $table->bigInteger('guru_id');
+            $table->string('nama_kelas')->length(150);
+            $table->enum('tingkatan',['7','8','9']);
+            $table->enum('kelompok_kelas',['A','B','C','D','E']);
             $table->timestamps();
-            $table->foreign('Guru_ID')->references('NUPTK')->on('gurus')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('guru_id')->references('nuptk')->on('gurus')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 

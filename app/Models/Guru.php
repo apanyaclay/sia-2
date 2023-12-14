@@ -11,18 +11,18 @@ class Guru extends Model
 
     protected $table = 'gurus';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'nuptk',
+        'user_id',
+        'nip',
+        'nama_guru',
+        'jenis_kelamin',
+        'tempat_lahir',
+        'tanggal_lahir',
+        'status_kepegawaian',
+        'jenis_ptk',
+        'jenjang_pendidikan',
+        'tmt_kerja',
+        'jjm',
+        'status',
     ];
 }

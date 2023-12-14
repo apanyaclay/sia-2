@@ -13,10 +13,11 @@ return new class extends Migration
     {
         Schema::create('nilai_ekskuls', function (Blueprint $table) {
             $table->id();
-            $table->unsignedBigInteger('Ekskul_Siswa_ID');
-            $table->enum('Nilai',['A','B','C','D','E']);
+            $table->unsignedBigInteger('ekskul_siswa_id');
+            $table->enum('nilai',['A','B','C','D','E']);
+            $table->text('keterangan');
             $table->timestamps();
-            $table->foreign('Ekskul_Siswa_ID')->references('id')->on('ekskul_siswas')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('ekskul_siswa_id')->references('id')->on('ekskul_siswas')->onDelete('restrict')->onUpdate('cascade');
             
         });
     }

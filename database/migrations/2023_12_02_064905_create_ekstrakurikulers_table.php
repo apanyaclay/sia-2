@@ -13,13 +13,13 @@ return new class extends Migration
     {
         Schema::create('ekstrakurikulers', function (Blueprint $table) {
             $table->id();
-            $table->string('Nama_Ekskul')->length(30);
-            $table->bigInteger('Guru_ID');
-            $table->enum('Hari',['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu']);
-            $table->time('Waktu_Mulai');
-            $table->time('Waktu_Selesai');
+            $table->string('nama_ekskul')->length(30);
+            $table->bigInteger('guru_id');
+            $table->enum('hari',['Senin','Selasa','Rabu','Kamis','Jumat','Sabtu']);
+            $table->time('waktu_mulai');
+            $table->time('waktu_selesai');
             $table->timestamps();
-            $table->foreign('Guru_ID')->references('NUPTK')->on('gurus')->onDelete('restrict')->onUpdate('cascade');
+            $table->foreign('guru_id')->references('nuptk')->on('gurus')->onDelete('restrict')->onUpdate('cascade');
         });
     }
 

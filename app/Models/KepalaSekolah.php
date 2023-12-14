@@ -9,20 +9,16 @@ class KepalaSekolah extends Model
 {
     use HasFactory;
 
-    protected $table = 'gurus';
+    protected $table = 'kepala_sekolahs';
     protected $fillable = [
-        'NUPTK',
-        'Users_ID',
-        'NIP',
-        'Nama_Guru',
-        'Jenis_Kelamin',
-        'Tempat_Lahir',
-        'Tanggal_Lahir',
-        'Status_Kepegawaian',
-        'Jenis_PTK',
-        'Jenjang_Pendidikan',
-        'TMT_Kerja',
-        'JJM',
-        'Status',
+        'id_kepsek',
+        'user_id',
+        'nama_kepsek',
+        'jenjang_pendidikan',
+        'jenis_kelamin',
+        'tempat_lahir',
+        'tanggal_lahir',
+        'tmt_kerja',
+        'status',
     ];
 }
