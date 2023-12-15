@@ -13,11 +13,6 @@
             @csrf
             <table class="table  mt-4">
                 <tr>
-                    <th>ID Pegawai</th>
-                    <td><input type="text" name="id" id="id" required value="{{ $data->id_pegawai }}" readonly>
-                    </td>
-                </tr>
-                <tr>
                     <th>Nama Pegawai</th>
                     <td><input type="text" name="nama" id="nama" required value="{{ $data->nama_pegawai }}">
                     </td>

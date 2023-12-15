@@ -18,7 +18,7 @@ class TataUsaha extends Model
         'tmt_kerja',
         'tempat_lahir',
         'tanggal_lahir',
-        'jenajng_pendidikan',
+        'jenjang_pendidikan',
         'status',
     ];
 }

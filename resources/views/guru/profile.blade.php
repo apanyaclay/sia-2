@@ -7,10 +7,12 @@
             style="font-family: Impact, Haettenschweiler, 'Arial Narrow Bold', sans-serif; text-align: center;"> PROFILE
             &nbsp; LENGKAP</h1>
     </div>
-    <div class="edit text-sm-end"><a href="{{ url('guru/akun/edit') }}" type="button" class="btn btn-secondary mt-3 mb-3"><i
-                class="fa-solid fa-file-pen" style="color: #ffffff;"></i> Edit Akun</a></div>
-                <div class="edit text-sm-end"><a href="{{ url('guru/profile/edit') }}" type="button" class="btn btn-secondary mt-3 mb-3"><i
-                    class="fa-solid fa-file-pen" style="color: #ffffff;"></i> Edit Profil</a></div>
+    <div class="edit text-sm-end">
+        <a href="{{ url('guru/akun/edit') }}" type="button" class="btn btn-secondary mt-3 mb-3"><i class="fa-solid fa-file-pen"
+                style="color: #ffffff;"></i> Edit Akun</a>
+        <a href="{{ url('guru/profile/edit') }}" type="button" class="btn btn-secondary mt-3 mb-3"><i
+                class="fa-solid fa-file-pen" style="color: #ffffff;"></i> Edit Profil</a>
+    </div>
     <div class="informasi py-3 px-3">
 
         <table class="table  mt-4">

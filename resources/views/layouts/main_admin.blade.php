@@ -50,9 +50,9 @@
                 <div id="collapseUtilities" class="collapse" aria-labelledby="headingUtilities"
                     data-parent="#accordionSidebar">
                     <div class="bg-white py-2 collapse-inner rounded">
-                        <a class="collapse-item" href="{{url('admin/daftarkelassiswa')}}">SISWA</a>
-                        <a class="collapse-item" href="{{url('admin/daftarptk')}}">PTK</a>
-                        <a class="collapse-item" href="{{url('admin/daftartu')}}">Tata Usaha</a>
+                        <a class="collapse-item" href="{{url('admin/listkelassiswa')}}">SISWA</a>
+                        <a class="collapse-item" href="{{url('admin/listguru')}}">PTK</a>
+                        <a class="collapse-item" href="{{url('admin/listtu')}}">TATA USAHA</a>
                     </div>
                 </div>
             </li>
@@ -208,7 +208,7 @@
                             <!-- Dropdown  -->
                             <div class="dropdown-menu dropdown-menu-right shadow animated--grow-in"
                                 aria-labelledby="userDropdown">
-                                <a class="dropdown-item" href="{{url('admin/profileadmin')}}">
+                                <a class="dropdown-item" href="{{url('admin/profile')}}">
                                     <i class="fas fa-user fa-sm fa-fw mr-2 text-gray-400"></i>
                                     Profile
                                 </a>

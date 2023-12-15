@@ -23,7 +23,6 @@ class ProfileController extends Controller
 
     public function editPost(Request $request){
         $data = $request->validate([
-            'id'=> 'required',
             'nama'=> 'required',
             'jenis_kelamin'=> 'required',
             'tempat_kerja'=> 'required',

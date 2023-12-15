@@ -4,7 +4,7 @@
     <meta charset="UTF-8">
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{{$data[0]->title}}</title>
+    <title>{{$data->title}}</title>
     <link rel="icon" type="" href="">
     <link rel="stylesheet" href="{{ asset('assets/style.css') }}">
     <link rel="stylesheet" href="{{ asset('assets/css/bootstrap.css') }}">
@@ -51,7 +51,7 @@
 <section class="Sekilas" >
     <div class="container">
         <h3 class="judulsekilas"> SEKILAS TENTANG <strong>SMP SWASTA AMALYATUL HUDA</strong></h3>
-        {{$data[0]->tentang}}
+        {{$data->tentang}}
     </div>
 </section>
 
@@ -62,12 +62,12 @@
               <div class="col">
                 <h3 class="judulvisimisi" style="text-align: center;">TUJUAN</h3>
                 
-                {!! nl2br($data[0]->tujuan) !!}
+                {!! nl2br($data->tujuan) !!}
 
               </div>
               <div class="col">
                 <h3 class="judulvisimisi" style="text-align: center;"> VISI DAN MISI</h3>
-                {!! nl2br($data[0]->visi_misi) !!}
+                {!! nl2br($data->visi_misi) !!}
 
               </div>
             </div>
