@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Guru;
 
 use App\Http\Controllers\Controller;
+use App\Models\AbsensiKelas;
 use App\Models\Guru;
 use App\Models\Kelas;
 use App\Models\Prestasi;
@@ -42,7 +43,11 @@ class RaporController extends Controller
         
         $prestasi = Prestasi::where('siswa_id', $kode)->get();
         $sikap = Sikap::where('siswa_id', $kode)->get();
-        return view('guru.rapordetail', compact('rapor', 'ekskul', 'prestasi', 'sikap'));
+        $sakit = AbsensiKelas::where(['siswa_id' => $kode, 'status' => 'Sakit'])->get();
+        $izin = AbsensiKelas::where(['siswa_id' => $kode, 'status' => 'Izin'])->get();
+        $alpa = AbsensiKelas::where(['siswa_id' => $kode, 'status' => 'Alpa'])->get();
+
+        return view('guru.rapordetail', compact('rapor', 'ekskul', 'prestasi', 'sikap', 'sakit', 'izin', 'alpa'));
     }
 
     public function edit($kode){

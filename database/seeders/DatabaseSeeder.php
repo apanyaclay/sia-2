@@ -30,6 +30,8 @@ class DatabaseSeeder extends Seeder
             RaporSeeder::class,
             SikapSeeder::class,
             NilaiSeeder::class,
+            AbsensiEkskulSeeder::class,
+            AbsensiKelasSeeder::class,
         ]);
     }
 }

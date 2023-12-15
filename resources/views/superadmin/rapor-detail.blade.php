@@ -167,15 +167,15 @@
     <table class="table text-left table-bordered">
         <tr>
             <td>Sakit</td>
-            <td>1 Hari</td>
+            <td>{{count($sakit)}} Hari</td>
         </tr>
         <tr>
             <td>Izin</td>
-            <td>1 Hari</td>
+            <td>{{count($izin)}} Hari</td>
         </tr>
         <tr>
             <td>Tanpa Keterangan</td>
-            <td>1 Hari</td>
+            <td>{{count($alpa)}} Hari</td>
         </tr>
     </table>
 

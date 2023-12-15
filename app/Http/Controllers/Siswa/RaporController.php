@@ -3,6 +3,7 @@
 namespace App\Http\Controllers\Siswa;
 
 use App\Http\Controllers\Controller;
+use App\Models\AbsensiKelas;
 use App\Models\Prestasi;
 use App\Models\Rapor;
 use App\Models\Sikap;
@@ -29,7 +30,10 @@ class RaporController extends Controller
         
         $prestasi = Prestasi::where('siswa_id', $siswa->nisn)->get();
         $sikap = Sikap::where('siswa_id', $siswa->nisn)->get();
+        $sakit = AbsensiKelas::where(['siswa_id' => $siswa->nisn, 'status' => 'Sakit'])->get();
+        $izin = AbsensiKelas::where(['siswa_id' => $siswa->nisn, 'status' => 'Izin'])->get();
+        $alpa = AbsensiKelas::where(['siswa_id' => $siswa->nisn, 'status' => 'Alpa'])->get();
 
-        return view('siswa.rapor', compact('rapor', 'ekskul', 'prestasi', 'sikap'));
+        return view('siswa.rapor', compact('rapor', 'ekskul', 'prestasi', 'sikap', 'sakit', 'izin', 'alpa'));
     }
 }
