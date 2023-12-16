@@ -14,7 +14,6 @@ class UserSeeder extends Seeder
      */
     public function run(): void
     {
-        // User::factory(10)->create();
         User::create([
             'name'      => 'Super Admin',
             'email'     => 'syafrizal@gmail.com',
@@ -138,75 +137,5 @@ class UserSeeder extends Seeder
             'password'  => Hash::make('siswa'),
             'role'     => 'Siswa',
         ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'damon@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'lisandro@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'dennis@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'leone@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'damon@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'damon@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'damon@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'damon@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'damon@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
-
-        // User::create([
-        //     'name'      => 'Siswa',
-        //     'email'     => 'damon@gmail.com',
-        //     'password'  => Hash::make('siswa'),
-        //     'role'     => 'Siswa',
-        // ]);
     }
 }
